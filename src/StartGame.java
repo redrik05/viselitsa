@@ -7,13 +7,13 @@ public class StartGame {
     private String[] secretWordArray; // массив для постепенного заполнения отгаданными буквами
     private int count;
     Hangman hangman;
-    EndGame endGame;
+    StartEndGame endGame;
     String alreadyChars; // буквы, которые уже были введены и не подошли
 
     public StartGame(String secretWord) {
         System.out.println(secretWord);
         hangman = new Hangman();
-        endGame = new EndGame();
+        endGame = new StartEndGame();
         sc = new Scanner(System.in);
         this.secretWord = secretWord;
         guessedWord = new String[secretWord.length()];
@@ -61,6 +61,6 @@ public class StartGame {
                 break;
             }
         }
-        endGame.endGame();
+        endGame.startEndGame();
     }
 }

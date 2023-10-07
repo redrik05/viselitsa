@@ -1,4 +1,23 @@
 public class Hangman {
+
+    private int countMistakes = 0;
+
+    public void getHangman() {
+        if (countMistakes >= hangman.length - 1) {
+            System.out.println(hangman[countMistakes]);
+            System.out.println("Осталось попыток: " + (hangman.length - (countMistakes + 1)));
+            System.out.println("ИГРА ОКОНЧЕНА, ВЫ ПРОИГРАЛИ");
+        } else {
+            System.out.println(hangman[countMistakes]);
+            System.out.println("Осталось попыток: " + (hangman.length - (countMistakes + 1)));
+        }
+        countMistakes++;
+    }
+
+    public int getCountMistakes() {
+        return countMistakes;
+    }
+
     private String[] hangman = {
             """
             ........................................
@@ -265,25 +284,6 @@ public class Hangman {
             ........................................
             """,
     };
-
-    private int countMistakes = 0;
-
-    public void getHangman() {
-        if (countMistakes >= hangman.length - 1) {
-            System.out.println(hangman[countMistakes]);
-            System.out.println("Осталось попыток: " + (hangman.length - (countMistakes + 1)));
-            System.out.println("ИГРА ОКОНЧЕНА, ВЫ ПРОИГРАЛИ");
-        } else {
-            System.out.println(hangman[countMistakes]);
-            System.out.println("Осталось попыток: " + (hangman.length - (countMistakes + 1)));
-        }
-        countMistakes++;
-    }
-
-    public int getCountMistakes() {
-        return countMistakes;
-    }
-
 }
 
 
