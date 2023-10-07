@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
-public class EndGame {
-    public void endGame() {
+public class StartEndGame {
+    public void startEndGame() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Введите 0 для выхода");
         System.out.println("Введите что угодно кроме 0 для новой игры");

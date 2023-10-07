@@ -20,7 +20,7 @@ public class RandomWordInSummary {
         } catch (IOException ex) {
             System.out.println(ex.getMessage());
         }
-        return randomWord;
+        return randomWord.toLowerCase();
     }
 
 }
